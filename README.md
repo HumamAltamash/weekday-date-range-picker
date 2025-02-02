@@ -42,24 +42,6 @@ npm run dev
 
 This will start the Vite development server and you can view the application at `http://localhost:3000`.
 
-### Build
-
-To build the project for production, run:
-
-```sh
-npm run build
-```
-
-The output will be in the `dist` directory.
-
-### Preview
-
-To preview the production build, run:
-
-```sh
-npm run preview
-```
-
 ### Lint
 
 To lint the project, run:
@@ -82,12 +64,8 @@ npm run lint
 This project uses Vitest for testing. To run the tests, use:
 
 ```sh
-npm run test
+npx vitest --watch
 ```
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 

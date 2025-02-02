@@ -68,22 +68,24 @@ const WeekdayDateRangePicker = (props: WeekdayDateRangePickerProps) => {
         []
       );
     } else {
+      let newStartDate = startDate;
+      let newEndDate = date;
+
       if (date < startDate) {
-        setEndDate(startDate);
-        setStartDate(date);
+        newStartDate = date;
+        newEndDate = startDate;
       } else {
-        setEndDate(date);
+        newEndDate = date;
       }
 
-      const weekendDates = getWeekendDates(startDate, date);
+      setStartDate(newStartDate);
+      setEndDate(newEndDate);
+
+      const weekendDates = getWeekendDates(newStartDate, newEndDate);
       onChange(
         [
-          Math.min(startDate.getTime(), date.getTime()) === startDate.getTime()
-            ? startDate.toLocaleDateString("en-CA")
-            : date.toLocaleDateString("en-CA"),
-          Math.max(startDate.getTime(), date.getTime()) === startDate.getTime()
-            ? startDate.toLocaleDateString("en-CA")
-            : date.toLocaleDateString("en-CA"),
+          newStartDate.toLocaleDateString("en-CA"),
+          newEndDate.toLocaleDateString("en-CA"),
         ],
         weekendDates
       );
