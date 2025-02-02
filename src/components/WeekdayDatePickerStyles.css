@@ -1,0 +1,128 @@
+.weekday-date-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffedfa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.date-selector-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.date-selector-input {
+  padding: 8px;
+  margin: 8px;
+  border: 1px solid #e195ab;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #de3163;
+  background-color: #ffedfa;
+}
+
+.date-selector-input:focus {
+  outline: none;
+  border-color: #de3163;
+}
+
+.date-selector-error {
+  color: #de3163;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.calender-button {
+  padding: 0;
+  border: none;
+  background-color: #ffedfa;
+  color: #ffedfa;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.calendar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.month-year-label {
+  font-size: 32px;
+  color: #de3163;
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  width: 100%;
+}
+
+.calendar-day {
+  padding: 10px;
+  border: 1px solid #e195ab;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffedfa;
+  color: #de3163;
+}
+
+.calendar-day:disabled {
+  background-color: #ccdf92;
+  color: #e195ab;
+  cursor: not-allowed;
+}
+
+.calendar-day.selected {
+  background-color: #de3163;
+  color: #ffedfa;
+}
+
+.calendar-day.outside-month {
+  opacity: 0.25;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #de3163;
+  color: #ffedfa;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button:hover {
+  background-color: #e195ab;
+}
+
+.button:disabled {
+  background-color: #ccdf92;
+  cursor: not-allowed;
+}
