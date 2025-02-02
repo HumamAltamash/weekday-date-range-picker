@@ -14,8 +14,8 @@ const isWeekend = (date: Date) => {
 };
 
 const getWeekendDates = (startDate: Date, endDate: Date) => {
-  let weekends: string[] = [];
-  let currentDate = new Date(startDate);
+  const weekends: string[] = [];
+  const currentDate = new Date(startDate);
 
   while (currentDate <= endDate) {
     if (isWeekend(currentDate)) {
@@ -46,9 +46,6 @@ const WeekdayDateRangePicker = (props: WeekdayDateRangePickerProps) => {
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
-
-  // @ts-ignore
-  const myIcon: IconProp = ["fa-solid", "fa-calendar-days"];
 
   const goToNextMonth = () => {
     setCurrentMonth((prevMonth) => (prevMonth + 1) % 12);
@@ -94,10 +91,10 @@ const WeekdayDateRangePicker = (props: WeekdayDateRangePickerProps) => {
   };
 
   const applyPredefinedRange = (days: number) => {
-    let end = new Date();
+    const end = new Date();
     end.setDate(end.getDate() - 1);
 
-    let start = new Date(end);
+    const start = new Date(end);
     start.setDate(end.getDate() - days + 1);
 
     while (isWeekend(start)) {

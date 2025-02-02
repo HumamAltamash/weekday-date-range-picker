@@ -38,7 +38,7 @@ const Calendar = (props: CalendarProps) => {
       const currentDate = new Date(firstDay);
       currentDate.setDate(firstDay.getDate() + i - firstDay.getDay());
 
-      let isOutsideMonth = currentDate.getMonth() !== currentMonth;
+      const isOutsideMonth = currentDate.getMonth() !== currentMonth;
 
       days.push(
         <button
